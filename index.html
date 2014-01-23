@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Image Scraper Bookmarket Demo</title>
+		<meta name="description" content="A bookmarket for scraping images from a webpage that share the same directory.">
+		<meta name="author" content="Trevor Broad">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>Image Scraper Bookmarket</h1>
+			</header>
+			<nav>
+				<p>Drag the link below into your chrome bookmark bar</p>
+				<a href=javascript:(function()%7Bjavascript:void((function()%7Bvar%20imgDirectory%3Dprompt(%27What%20directory%20do%20you%20want%20to%20scrape%3F%27)%3Bvar%20imgArray%3D%5B%5D%3Bvar%20target%3Ddocument.getElementsByTagName(%27img%27)%3Bvar%20regex_string%3DimgDirectory%2B%27.*%27%3Bvar%20regex_dir%3DRegExp(regex_string)%3Bfor(var%20i%3D0%3Bi%3Ctarget.length%3Bi%2B%2B)%7Bvar%20src%3Dtarget%5Bi%5D.getAttribute(%27src%27)%3Bif(src%3D%3Dsrc.match(regex_dir))%7BimgArray.push(target%5Bi%5D.getAttribute(%27src%27))%3B%7D%7DsetTimeout(runDownloads,1000)%3Bfunction%20runDownloads()%7Bconsole.log(imgArray)%3Bvar%20link%3Bvar%20fileName%3Bvar%20e%3Bfor(var%20i%3D0%3Bi%3CimgArray.length%3Bi%2B%2B)%7Blink%3Ddocument.createElement(%27a%27)%3Blink.href%3DimgArray%5Bi%5D%3BfileName%3DimgArray%5Bi%5D.substring(imgArray%5Bi%5D.lastIndexOf(%27/%27)%2B1,imgArray%5Bi%5D.length)%3Blink.download%3DfileName%3Be%3Ddocument.createEvent(%27MouseEvents%27)%3Be.initEvent(%27click%27,true,true)%3Blink.dispatchEvent(e)%3Bwindow.open(imgArray%5Bi%5D%2B%27%3Fdownload%27)%3B%7D%7D%7D)())%3B%7D)()%3B>Image Scraper</a>
+				<br/><br/>
+				<p>Want to modify the source code?</p>
+				<a href="https://github.com/macmadman/image-directory-scrape">Download on GitHub</a>
+			</nav>
+
+			<div>
+
+			</div>
+
+			<footer>
+				<p>
+					By Trevor Broad
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

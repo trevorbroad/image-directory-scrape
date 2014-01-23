@@ -1,4 +1,4 @@
-Image Directory Scrape Bookmarklet
+Image Scraper Bookmarklet
 ===================================
 
 A bookmarket for scraping images from a webpage that share the same directory.
